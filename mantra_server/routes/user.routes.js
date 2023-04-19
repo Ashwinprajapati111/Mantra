@@ -10,13 +10,13 @@ module.exports = (app) => {
     );
     next();
   });
-
+  router.post("/signup", user.signup);
   // router.post("/signup", user.validate('signup'),user.signup);
-  // router.post("/signin", user.signin);
+  router.post("/signin", user.signin);
   // router.get("/getall", [authJwt.verifyToken],user.findAll);
   // router.delete("/signup/:id", user.delete);
   //  router.post("/",food.create);
 
   //  router.put("/:id",user.update);
-  // app.use("/mantra", router);
+  app.use("/mantra", router);
 };
