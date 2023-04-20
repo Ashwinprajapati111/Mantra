@@ -4,6 +4,7 @@ import {
 	Brand,
 	BrandImage,
 	Container,
+	NavLink,
 	Menu,
 	MenuItems,
 	Nav,
@@ -12,8 +13,6 @@ import {
 	MobileMenuHover,
 } from './NavbarStyle';
 import { NavbarData } from './NavbarData';
-import {Link} from "react-router-dom";
-
 
 export default function Navbar() {
 	const screenSize = 580;
@@ -49,7 +48,7 @@ export default function Navbar() {
 					<Menu toggleMenu={toggleMenu} ss={screenSize}>
 						{NavbarData.map((item, index) => (
 							<MenuItems key={index} toggleMenu={toggleMenu} ss={screenSize}>
-								<Link to={item.link}>{item.title}</Link>
+								<NavLink to={item.link}>{item.title}</NavLink>
 							</MenuItems>
 						))}
 					</Menu>

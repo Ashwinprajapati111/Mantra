@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 import { BiMenuAltRight, BiMenu } from 'react-icons/bi';
 
 export const Nav = styled.nav`
-	background-color: #124472;
+	background-color: #333;
 	color: #fff;
-	height: 100px;
+	height: 101px;
 
 	display: flex;
 	align-items: center;
@@ -15,7 +15,7 @@ export const Container = styled.div`
 	width: 100%;
 	max-width: 1100px;
 	margin: 0 auto;
-	padding: 10px;
+
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -28,7 +28,7 @@ export const Container = styled.div`
 export const Brand = styled.div`
 	width: 150px;
 	height: 100%;
-	margin-left:10px;
+
 	display: grid;
 	place-items: center;
 `;
@@ -43,19 +43,19 @@ export const Menu = styled.ul`
 	list-style: none;
 
 	display: flex;
-
-
+	align-items: center;
+	column-gap: 10px;
 
 	@media screen and (max-width: ${(props) => props.ss}px) {
 		width: 100%;
 		padding: 20px;
 		flex-direction: column;
 
-		background-color: #124472;
+		background-color: #333;
 		border-top: 1px solid #fff;
 
 		position: absolute;
-		top: 83px;
+		top: 50px;
 		left: 0;
 		z-index: ${(props) => (props.toggleMenu ? '1' : '-1')};
 
@@ -80,7 +80,7 @@ export const Menu = styled.ul`
 `;
 
 export const MenuItems = styled.li`
-	padding: 11px;
+	padding: 5px;
 
 	@media screen and (max-width: ${(props) => props.ss}px) {
 		opacity: ${(props) => (props.toggleMenu ? '1' : '0')};
