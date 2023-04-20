@@ -1,0 +1,92 @@
+/* 
+** The Header Media Queries **
+** Tweak as per your needs **
+*/
+.brand {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.site-header {
+  position: relative;
+  background-color: #def7ff;
+}
+.site-header_mobile {
+  position: relative;
+  background-color: #afd1dd;
+}
+
+.site-header__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.nav__wrapper {
+  display: flex;
+}
+.nav__toggle {
+  display: none;
+}
+.site-header_mobile {
+  background-color: rgb(185, 223, 223);
+}
+@media (max-width: 630px) {
+  .site-header__wrapper {
+    justify-content: initial;
+  }
+  .site-header__middle {
+    margin-left: auto;
+  }
+
+  .nav__wrapper {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    z-index: -1;
+    background-color: #004e66;
+    display: none;
+  }
+  .site-header__end {
+    padding-right: 4rem;
+  }
+  .nav__toggle {
+    display: block;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+  }
+}
+
+
+.site-header_mobile{
+  display: none;
+}
+.nav_mobile{
+  width: 100% !important;
+}
+
+
+.nav__item a {
+  display: block;
+  padding: 1rem;
+}
+.nav__item_mobile a{
+  display: block;
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(0,0,0,.1)
+}
+.nav__item_mobile ::before{
+  /* border-top: 1px solid rgba(0,0,0,.1); */
+  width: 100%;
+
+}
+.nav__item_mobile{
+  width: 100%!important;
+}
+
+
+
